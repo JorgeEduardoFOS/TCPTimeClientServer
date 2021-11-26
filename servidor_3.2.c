@@ -6,9 +6,6 @@
 #include <errno.h>
 #include "wraper.h"
 
-#define LISTENQ 10
-#define MAXDATASIZE 100
-
 int main (int argc, char **argv) {
    int    listenfd, connfd;
    struct sockaddr_in servaddr; //cliaddr;
