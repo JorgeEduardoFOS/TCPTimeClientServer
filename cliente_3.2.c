@@ -5,8 +5,6 @@
 #include <unistd.h>//read
 #include "wraper.h"
 
-#define MAXLINE 4096
-
 int main(int argc, char **argv) {
    int    sockfd, n;
    char   recvline[MAXLINE + 1];
