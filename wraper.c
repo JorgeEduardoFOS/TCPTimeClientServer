@@ -50,7 +50,7 @@ void Listen(int sockfd, int backlog){
 }
                                                                        
 int Accept(int sockfd, struct sockaddr *restrict addr, socklen_t *restrict addrlen){
-  int connfd;int listenfd, connfd;
+  int connfd;
   if ((connfd = accept(sockfd, (struct sockaddr *) addr, addrlen)) == -1 ) {
       perror("accept");
       exit(1);
