@@ -4,9 +4,8 @@
 #include <arpa/inet.h>//inet_peton
 #include "wraper.h"
 
-int listenfd, connfd;
-
 int Socket(int domain, int type, int protocol){
+  int listenfd;
   if ((listenfd = socket(domain, type, protocol)) == -1) {
       perror("socket");
       exit(1);
@@ -51,6 +50,7 @@ void Listen(int sockfd, int backlog){
 }
                                                                        
 int Accept(int sockfd, struct sockaddr *restrict addr, socklen_t *restrict addrlen){
+  int connfd;int listenfd, connfd;
   if ((connfd = accept(sockfd, (struct sockaddr *) addr, addrlen)) == -1 ) {
       perror("accept");
       exit(1);
