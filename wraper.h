@@ -1,6 +1,10 @@
 #include <stdio.h>//FILE
 #include <netdb.h>//sockaddr, socklen_t
 
+#define LISTENQ 10
+#define MAXDATASIZE 100
+#define MAXLINE 4096
+
 int Socket(int domain, int type, int protocol);
 void Bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
 void Inet_pton(int af, const char *restrict src, void *restrict dst);
