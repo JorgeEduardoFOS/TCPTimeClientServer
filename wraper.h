@@ -5,6 +5,11 @@
 #define MAXDATASIZE 100
 #define MAXLINE 4096
 
+void err_quit(const char *s);
+void Close(int fd);
+void Write(int fd, const void *buf, size_t count);
+int Setsockopt(int sockfd, int level, int optname, const void *optval, socklen_t optlen);
+int tcp_listen(const char *host, const char *serv, socklen_t *addrlenp);
 int Socket(int domain, int type, int protocol);
 void Bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
 void Inet_pton(int af, const char *restrict src, void *restrict dst);
